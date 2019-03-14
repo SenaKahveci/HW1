@@ -1,0 +1,25 @@
+coordinates = [(1,1), (1,5), (2,6), (4,6), (5,3)]
+sum = 0
+print (coordinates[0])
+print (coordinates[1])
+print (coordinates[2])
+print (coordinates[3])
+print (coordinates[4])
+index = 0
+length = len(coordinates)
+while index < length-1:
+    start = coordinates[index]
+    end = coordinates[index+1]
+    x1 = start[0]
+    x2 = end[0]
+    y1 = start[1]
+    y2 = end[1]
+    center=(abs(x1-x2))/2., (abs(y1-y2))/2.
+    print("the center of the mass is", center)
+    distance= ((abs(x1-x2))**2+(abs(y1-y2))**2)**.5
+    print("euclidean", distance)
+    index = index + 1
+    
+    #we can also import math and use distance = math.sqrt((x1-x2) ** 2) + ((y1-y2) ** 2) for sqrt.
+    #we can define x,y=zip(*points) and use center=(max(x)+min(x))/2., (max(y)+min(y))/2.
+    
